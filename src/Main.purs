@@ -20,8 +20,20 @@ import ReactDOM as ReactDOM
 import Example.TodoList (todoListClass)
 import Example.Types (Todo(..), TodoStatus(..))
 
+-- define in Web.HWML.Window
+-- data Window :: Type
+-- document :: Window -> Effect HTMLDocument
+
+-- data Unit :: Type
+-- Unit type mean only effects is important.
+-- void is a function in Functor typeclass.
+-- unit is a functor.
 main :: Effect Unit
 main = void $ do
+  -- 基本上，幾乎所有的動作type 都是 effect
+  -- Unit 這個type 代表回傳值不重要，搭配 void這個function，可以達到 "return null" 的效果
+
+  -- window :: Effect Window
   window <- DOM.window
 
   document <- DOM.document window

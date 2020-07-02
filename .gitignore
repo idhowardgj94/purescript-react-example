@@ -1,4 +1,6 @@
 .DS_Store
+*.dhall
+test
 .psci
 .psci_modules
 .psc-ide-port
